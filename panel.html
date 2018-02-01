@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>custom panel</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px auto;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: auto;
+        }
+
+        .main-ctnr {
+            width: 80%;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .pnl-ctnr {
+            display: none;
+        }
+
+        .pnl-btn {
+            text-align: center;
+            background: #f82f5c;
+            transition: all .25s ease-in-out;
+        }
+
+        .pnl-btn:hover {
+            cursor: pointer;
+            background: #fcdddd;
+
+        }
+
+        .pnl-btn,
+        .pnl-ctnr {
+            padding: 10px;
+            width: 80%;
+            border: 1px solid #4d4d4d;
+        }
+    </style>
+    <script>
+            $(document).ready(function(){
+                $(".pnl-btn").each(function(index,item){
+                    $(".pnl-btn").addClass("active");
+                    $(".pnl-ctnr:eq(0)").show();
+                        $(this).click(function(){
+                            if($(this).hasClass("active")){
+                                $(".pnl-btn").removeClass("active");
+                                $(".pnl-ctnr").slideUp(500);
+                            }
+                            else{
+                                $(this).addClass("active");
+                                $(".pnl-ctnr").slideUp(500);
+                                $(".pnl-ctnr:eq("+index+")").slideDown(500);
+                            }
+                            
+                        })
+                });
+            })
+    </script>
+</head>
+
+<body>
+    <div class="main-ctnr">
+        <div class="pnl-btn">
+            Panel01
+        </div>
+
+        <div class="pnl-ctnr">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                to make a type specimen book.</p>
+        </div>
+        <div class="pnl-btn">
+            Panel02
+        </div>
+
+        <div class="pnl-ctnr">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                to make a type specimen book.</p>
+        </div>
+        <div class="pnl-btn">
+            Panel03
+        </div>
+
+        <div class="pnl-ctnr">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                to make a type specimen book.</p>
+        </div>
+        <div class="pnl-btn">
+            Panel04
+        </div>
+
+        <div class="pnl-ctnr">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                to make a type specimen book.</p>
+        </div>
+        <div class="pnl-btn">
+            Panel05
+        </div>
+
+        <div class="pnl-ctnr">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                to make a type specimen book.</p>
+        </div>
+    </div>
+</body>
+
+</html>
