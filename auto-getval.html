@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>auto get values</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        for(i=0; i<$('input').length; i++){
+            $('input:eq('+i+')').attr('id','entry'+i+'');
+        }
+    })
+    </script>
+</head>
+<body>
+    <div class="main-ctnr">
+        <div class="form">
+            <label for="name">Name:</label>
+            <input type="text" placeholder="Enter your name">
+            <label for="name">Mobile:</label>
+            <input type="text" placeholder="Enter your Number">
+            <label for="name">Email</label>
+            <input type="text" placeholder="Enter your Email">
+        </div>
+    </div>
+</body>
+</html>
