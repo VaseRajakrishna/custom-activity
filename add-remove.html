@@ -13,10 +13,14 @@
                 $(".btn-ctnr").append("<button>OM Namah  Shivaya!</buttton><br>");
                // $("button").addClass("btn");
                 //$(this).removeClass("btn")
+                $(".btn-ctnr").children("button").css("background","red");
+                $(".btn-ctnr").children("button:last").css("background","green");
             });
             $(".remove").on("click", function () {
                /// $(this).removeClass("btn")
-                $(".btn-ctnr").children("button.last").remove();
+               $(".btn-ctnr").children("button").css("background","red");
+               $(".btn-ctnr").children("button:last").remove();
+               $(".btn-ctnr").children("button:last").css("background","green");
             });
 
         })
