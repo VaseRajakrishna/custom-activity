@@ -11,13 +11,13 @@
         $(document).ready(function () {
             $(".add").on("click", function () {
                 $(".btn-ctnr").append("<button>OM Namah  Shivaya!</buttton><br>");
-                $("button").addClass("btn");
-                $(this).removeClass("btn")
-            })
+               // $("button").addClass("btn");
+                //$(this).removeClass("btn")
+            });
             $(".remove").on("click", function () {
-                $(this).removeClass("btn")
-                $(".btn:last").remove();
-            })
+               /// $(this).removeClass("btn")
+                $(".btn-ctnr").children("button.last").remove();
+            });
 
         })
     </script>
