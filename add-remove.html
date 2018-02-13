@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,26 @@
     <title>Auto-Remove</title>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script>
-    $(document).ready(function(){
-        $("#add").on("click",function(){
-            $(".btn").append("<button>Button</buttton>");
-        })
-        $("#remove").on("click",function(){
-            $(".btn:last").remove();
-        })
+        $(document).ready(function () {
+            $(".add").on("click", function () {
+                $(".btn-ctnr").append("<button>Button</buttton><br>");
+                $("button").addClass("btn");
+                $(this).removeClass("btn")
+            })
+            $(".remove").on("click", function () {
+                $(this).removeClass("btn")
+                $(".btn:last").remove();
+            })
 
-    })
+        })
     </script>
     <style>
-      h1{
-        text-align: center;
+        h1 {
+            text-align: center;
         }
-        button{
-            padding: 10px 15px;
+
+        button {
+           padding: 10px 15px;
             background: #ff0808;
             outline: none;
             border: none;
@@ -30,16 +35,30 @@
             color: #fff9f9;
             font-size: 16px;
             cursor: pointer;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            display: inline-block;
+        }
+
+        .add {
+            background: green;
         }
     </style>
 </head>
+
 <body>
     <div class="main-ctnr">
         <h1>Adding Elememmt and Removing Element</h1>
         <hr>
-        <button class="btn">Adding Element</button><br><br>
-        <button id="add">Add</button>
-        <button id="remove">Remove</button>
+        <div class="btn-ctnr">
+            <button class="btn">Adding Element</button>
+            <br>
+            <br>
+        </div>
+
+        <button class="add">Add</button>
+        <button class="remove">Remove</button>
     </div>
 </body>
+
 </html>
